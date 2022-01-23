@@ -105,6 +105,7 @@ alias gohome='cd ~'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias gs=' git status'
 #zsh-syntax-highlighting
+#follow instructions here https://github.com/zsh-users/zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # adding bash profile?
 source ~/.bash_profile;
