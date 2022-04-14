@@ -12,6 +12,10 @@ export CODELY_THEME_PWD_MODE="short" # full, short, home_relative
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/amazon-corretto-15.jdk/Contents/Home'
 export GEM_HOME="$HOME/.gem"
 export GOPATH="$HOME/.go"
+export NVM_DIR="$HOME/.nvm"
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # ------------------------------------------------------------------------------
 # Apps
@@ -31,6 +35,8 @@ export path=(
   "$HOME/bin"
   "$DOTLY_PATH/bin"
   "$DOTFILES_PATH/bin"
+  "/snap/bin"
+  "NVM_DIR"
   "$JAVA_HOME/bin"
   "$GEM_HOME/bin"
   "$GOPATH/bin"
