@@ -1,5 +1,4 @@
-
-# Enable aliases to be sudo’ed
+# Enable aliases to be sudo
 alias sudo='sudo '
 
 alias ..="cd .."
@@ -26,8 +25,7 @@ alias gb="git branch"
 alias gl='$DOTLY_PATH/bin/dot git pretty-log'
 
 # Docker
-alias doc = "docker-compose"
-
+alias doc="docker-compose"
 
 # Utils
 alias k='kill -9'
@@ -35,3 +33,7 @@ alias i.='(idea $PWD &>/dev/null &)'
 alias c.='(code $PWD &>/dev/null &)'
 alias o.='open .'
 alias up='dot package update_all'
+
+# Settle
+alias ztlup="docker-compose -f settle-ws/zetl-compose/docker-compose.yml up"
+alias ztldown="docker-compose -f settle-ws/zetl-compose/docker-compose.yml down"
