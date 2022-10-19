@@ -36,5 +36,5 @@ alias o.='xdg-open .'
 alias up='dot package update_all'
 
 # Settle
-alias ztlup="/bin/docker-compose -f settlews/zetl-compose/docker-compose.yml up"
-alias ztldown="/bin/docker-compose -f settlews/zetl-compose/docker-compose.yml down"
+alias ztlup="/bin/docker-compose -f /home/mstefanutti/settlews/zetl-compose/docker-compose.yml up"
+alias ztldown="/bin/docker-compose -f /home/mstefanutti/settlews/zetl-compose/docker-compose.yml down"
