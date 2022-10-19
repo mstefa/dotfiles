@@ -25,7 +25,7 @@ alias gb="git branch"
 alias gl='$DOTLY_PATH/bin/dot git pretty-log'
 
 # Docker
-alias doc = "docker-compose"
+alias doc="/bin/docker-compose"
 
 
 # Utils
@@ -36,5 +36,5 @@ alias o.='xdg-open .'
 alias up='dot package update_all'
 
 # Settle
-alias ztlup="docker-compose -f settle-ws/zetl-compose/docker-compose.yml up"
-alias ztldown="docker-compose -f settle-ws/zetl-compose/docker-compose.yml down"
+alias ztlup="/bin/docker-compose -f settlews/zetl-compose/docker-compose.yml up"
+alias ztldown="/bin/docker-compose -f settlews/zetl-compose/docker-compose.yml down"
