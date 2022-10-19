@@ -29,8 +29,13 @@ alias doc = "docker-compose"
 
 
 # Utils
+# Utils
 alias k='kill -9'
 alias i.='(idea $PWD &>/dev/null &)'
 alias c.='(code $PWD &>/dev/null &)'
-alias o.='open .'
+alias o.='xdg-open .'
 alias up='dot package update_all'
+
+# Settle
+alias ztlup="docker-compose -f settle-ws/zetl-compose/docker-compose.yml up"
+alias ztldown="docker-compose -f settle-ws/zetl-compose/docker-compose.yml down"
