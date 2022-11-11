@@ -54,6 +54,19 @@ inoremap < <><Esc>i
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
 
+" VIM
+" " Instal plugings manager : curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" " En vim :PluginInstall"
 
-" Instal plugings manager : curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-" En vim :PluginInstall
+" NEOVIM
+" create file in .config/nvim/init.vim with: 
+" set runtimepath^=~/.vim runtimepath+=~/.vim/after
+" let &packpath=&runtimepath
+" source ~/.vimrc
+
+" Instalar plug => https://github.com/junegunn/vim-plug
+" sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+"  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+" Run intaller on vim/nvim
+" En vim :PluginInstall"
