@@ -26,6 +26,7 @@ alias gl='$DOTLY_PATH/bin/dot git pretty-log'
 
 # Docker
 alias doc="/bin/docker-compose"
+alias doc_clean="docker volume rm $(docker volume ls -qf dangling=true)"
 
 
 # Utils
@@ -37,4 +38,4 @@ alias up='dot package update_all'
 
 # Settle
 alias ztlup="/bin/docker-compose -f /home/mstefanutti/settlews/zetl-compose/docker-compose.yml up"
-alias ztldown="/bin/docker-compose -f /home/mstefanutti/settlews/zetl-compose/docker-compose.yml down"
+alias ztldown="/bin/docker-compose -f /home/mstefanutti/settlews/zetl-compose/docker-compose.yml down --remove-orphans"
