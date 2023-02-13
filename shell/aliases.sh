@@ -18,7 +18,8 @@ alias gca="git add --all && git commit --amend --no-edit"
 alias gd='git pretty-diff'
 alias gs="git status -sb"
 alias gf="git fetch --all -p"
-alias gp="git push"
+alias gps="git push"
+alias gpl="git pull"
 alias gpsf="git push --force"
 alias gpl="git pull --rebase --autostash"
 alias gb="git branch"
@@ -36,6 +37,4 @@ alias c.='(code $PWD &>/dev/null &)'
 alias o.='xdg-open .'
 alias up='dot package update_all'
 
-# Settle
-alias ztlup="/bin/docker-compose -f /home/mstefanutti/settlews/zetl-compose/docker-compose.yml up"
-alias ztldown="/bin/docker-compose -f /home/mstefanutti/settlews/zetl-compose/docker-compose.yml down --remove-orphans"
+alias note='cd /home/consultant/Documents && nvim notes.md'

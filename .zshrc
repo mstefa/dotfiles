@@ -3,7 +3,7 @@
 # for mysql app. 
 #export PATH=${PATH}:/usr/local/mysql/bin/
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/mstefanutti/.oh-my-zsh"
+export ZSH="/Users/consultant/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

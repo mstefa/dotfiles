@@ -37,6 +37,8 @@ setlocal sw=2 sts=2 et
 :imap jj <Esc>
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
+nmap <Leader>q! :q!<CR>
+
 
 "plugings
 nmap <Leader>s <Plug>(easymotion-s2)
