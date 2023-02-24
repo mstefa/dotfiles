@@ -21,7 +21,7 @@ alias gf="git fetch --all -p"
 alias gps="git push"
 alias gpl="git pull"
 alias gpsf="git push --force"
-alias gpl="git pull --rebase --autostash"
+# alias gpl="git pull --rebase --autostash"
 alias gb="git branch"
 alias gl='$DOTLY_PATH/bin/dot git pretty-log'
 
@@ -38,3 +38,7 @@ alias o.='xdg-open .'
 alias up='dot package update_all'
 
 alias note='cd /home/consultant/Documents && nvim notes.md'
+alias vim='nvim'
+
+#Telefonica
+alias getEnvs='$DOTFILES_PATH/scripts/getEnvData.sh'
