@@ -40,5 +40,9 @@ alias up='dot package update_all'
 alias note='cd /home/consultant/Documents && nvim notes.md'
 alias vim='nvim'
 
+alias bat='batcat'
+alias doc_connect='$DOTFILES_PATH/scripts/docker_connect.sh'
+
 #Telefonica
-alias getEnvs='$DOTFILES_PATH/scripts/getEnvData.sh'
+alias getenvs='$DOTFILES_PATH/scripts/kube_get_env.sh'
+alias portForward='kubectl -n aura-ap-two port-forward deployment/aura-configuration-api 8999:8999'
