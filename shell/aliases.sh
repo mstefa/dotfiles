@@ -3,8 +3,8 @@ alias sudo='sudo '
 
 alias ..="cd .."
 alias ...="cd ../.."
-alias ll="ls -l"
-alias la="ls -la"
+alias ll="ls -l --color=tty"
+alias la="ls -la --color=tty"
 alias ~="cd ~"
 alias dotfiles='cd $DOTFILES_PATH'
 
@@ -16,17 +16,18 @@ alias gsw='git switch'
 alias gs="git status"
 alias gca="git add --all && git commit --amend --no-edit"
 alias gd='git pretty-diff'
-alias gs="git status -sb"
+alias gst="git status -sb"
 alias gf="git fetch --all -p"
-alias gp="git push"
+alias gps="git push"
+alias gpl="git pull"
 alias gpsf="git push --force"
-alias gpl="git pull --rebase --autostash"
+# alias gpl="git pull --rebase --autostash"
 alias gb="git branch"
 alias gl='$DOTLY_PATH/bin/dot git pretty-log'
 
 # Docker
-alias doc="/bin/docker-compose"
-alias doc_clean="docker volume rm $(docker volume ls -qf dangling=true)"
+# alias doc="/bin/docker-compose"
+# alias doc_clean="docker volume rm $(docker volume ls -qf dangling=true)"
 
 
 # Utils
@@ -36,6 +37,12 @@ alias c.='(code $PWD &>/dev/null &)'
 alias o.='xdg-open .'
 alias up='dot package update_all'
 
-# Settle
-alias ztlup="/bin/docker-compose -f /home/mstefanutti/settlews/zetl-compose/docker-compose.yml up"
-alias ztldown="/bin/docker-compose -f /home/mstefanutti/settlews/zetl-compose/docker-compose.yml down --remove-orphans"
+alias note='cd /home/consultant/Documents && nvim notes.md'
+# alias vim='nvim'
+
+alias bat='batcat'
+# alias doc_connect='$DOTFILES_PATH/scripts/docker_connect.sh'
+
+#Telefonica
+alias getenvs='$DOTFILES_PATH/scripts/kube_get_env.sh'
+alias portForward='kubectl -n aura-ap-two port-forward deployment/aura-configuration-api 8999:8999'

@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-source "/home/mstefanutti/.dotfiles/shell/bash/.bashrc"
+source "/Users/mstefanutti/.dotfiles/shell/bash/.bashrc"
 
 ##? dot, but without environment variables
 ##?
