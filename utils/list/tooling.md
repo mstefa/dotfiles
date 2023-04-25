@@ -14,4 +14,4 @@ The TLDR (stands for “Too Long; Didn’t Read“. ) pages are summarized pract
 
 install sudo npm install -g tldr
 
-ex tldr jq
+ex `tldr jq`
