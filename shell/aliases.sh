@@ -46,3 +46,4 @@ alias bat='batcat'
 #Telefonica
 alias getenvs='$DOTFILES_PATH/scripts/kube_get_env.sh'
 alias portForward='kubectl -n aura-ap-two port-forward deployment/aura-configuration-api 8999:8999'
+alias portForward2='kubectl -n aura-ap-two port-forward deployment/aura-bridge 8045:8045'
