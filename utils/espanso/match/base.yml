@@ -13,7 +13,7 @@ matches:
   - trigger: ":espanso"
     replace: "Hi there!"
   - trigger: ":ods"
-    replace: "muchas gracias por tu contacto. Por el momento no estoy interesado en un cambio profesional, pero me gustaría q sigamos en contacto para futuras búsquedas"
+    replace: "muchas gracias por tu contacto. Por el momento no estoy interesado en un cambio profesional, pero me gustaría que sigamos en contacto para futuras oportunidades"
   - trigger: ":ode"
     replace: "I'm very thankful you consider being part of this project. Right now, I'm not looking for a professional change, but I will be very happy to keep in touch for future opportunities."
   # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!

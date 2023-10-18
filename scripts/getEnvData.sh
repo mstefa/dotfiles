@@ -27,3 +27,6 @@ if kubectl get namespaces > /dev/null 2>&1; then
 else
   echo "Any namespaces was found"
 fi
+
+
+# kubectl -n aura-ap-four get cm aura-bot -o json | jq -r ".data|to_entries|map(\"\(.key)=\(.value|tostring)\")|.[]"; kubectl -n aura-ap-four get secret aura-bot -o json | jq -r ".data|to_entries|map(\"\(.key)=\(.value|tostring|@base64d)\")|.[]"
