@@ -11,7 +11,17 @@ export CODELY_THEME_PWD_MODE="short" # full, short, home_relative
 # ------------------------------------------------------------------------------
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/amazon-corretto-15.jdk/Contents/Home'
 export GEM_HOME="$HOME/.gem"
-export GOPATH="$HOME/.go"
+# export GOPATH="$HOME/.go"
+
+# ---------------------------------------------
+# 🎯 START OF GOENV CONFIGURATION
+#
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+#
+# 🎯 END OF GOENV CONFIGURATION
+# -----------------------------------------------------
 
 # ------------------------------------------------------------------------------
 # Apps
@@ -31,6 +41,8 @@ path=(
 	"$HOME/bin"
 	"$DOTLY_PATH/bin"
 	"$DOTFILES_PATH/bin"
+	"$GOENV_ROOT/bin"
+	"$GOENV_ROOT/shims"
 	"$JAVA_HOME/bin"
 	"$GEM_HOME/bin"
 	"$GOPATH/bin"
@@ -44,7 +56,6 @@ path=(
 	"/usr/bin"
 	"/usr/sbin"
 	"/sbin"
-	"$path"
 )
 
 export path
