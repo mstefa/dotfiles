@@ -18,7 +18,12 @@ export GEM_HOME="$HOME/.gem"
 #
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
-eval "$(goenv init -)"
+# Lazy load goenv
+function go gofmt goenv {
+	unset -f go gofmt goenv
+	eval "$(goenv init -)"
+	"$0" "$@"
+}
 #
 # 🎯 END OF GOENV CONFIGURATION
 # -----------------------------------------------------

@@ -29,8 +29,13 @@ source "$DOTLY_PATH/shell/zsh/bindings/reverse_search.zsh"
 source "$DOTFILES_PATH/shell/zsh/key-bindings.zsh"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Lazy load NVM
+function nvm node npm npx yarn pnpm {
+	unset -f nvm node npm npx yarn pnpm
+	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+	"$0" "$@"
+}
 
 # pnpm
 # export PNPM_HOME="/Users/mstefanutti/Library/pnpm"
@@ -41,3 +46,25 @@ export NVM_DIR="$HOME/.nvm"
 # pnpm end
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/mstefanutti/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/mstefanutti/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud (Lazy Loaded).
+function gcloud {
+	unset -f gcloud
+	if [ -f '/Users/mstefanutti/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mstefanutti/google-cloud-sdk/completion.zsh.inc'; fi
+	gcloud "$@"
+}
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/mstefanutti/.local/bin:$PATH"
+
+# Added by Antigravity IDE
+export PATH="/Users/mstefanutti/.antigravity-ide/antigravity-ide/bin:$PATH"
+export PATH="/Users/mstefanutti/.local/bin:$PATH"
+
+# Added by Antigravity IDE
+export PATH="/Users/mstefanutti/.antigravity-ide/antigravity-ide/bin:$PATH"
