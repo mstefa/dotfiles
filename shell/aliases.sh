@@ -7,6 +7,7 @@ alias ll="ls -l"
 alias la="ls -la"
 alias ~="cd ~"
 alias dotfiles='cd $DOTFILES_PATH'
+alias work="cd ~/workspace"
 
 # Git
 alias gaa="git add -A"
@@ -28,6 +29,7 @@ alias gl='$DOTLY_PATH/bin/dot git pretty-log'
 alias k='kill -9'
 alias i.='(idea $PWD &>/dev/null &)'
 alias c.='(code $PWD &>/dev/null &)'
+alias a.='(agy-ide $PWD &>/dev/null &)'
 alias o.='open .'
 alias up='dot package update_all'
 
