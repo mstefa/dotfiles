@@ -14,10 +14,9 @@ alias gaa="git add -A"
 alias ga="git add"
 alias gc='git commit'
 alias gsw='git switch'
-alias gs="git status"
+alias gs="git status -sb"
 alias gca="git add --all && git commit --amend --no-edit"
 alias gd='git pretty-diff'
-alias gs="git status -sb"
 alias gf="git fetch --all -p"
 alias gp="git push"
 alias gpsf="git push --force"
@@ -32,6 +31,3 @@ alias c.='(code $PWD &>/dev/null &)'
 alias a.='(agy-ide $PWD &>/dev/null &)'
 alias o.='open .'
 alias up='dot package update_all'
-
-# script
-alias convert_heic='$DOTFILES_PATH/scripts/convert-heic-to-jpg.sh'

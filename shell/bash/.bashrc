@@ -1,4 +1,4 @@
-export DOTFILES_PATH="/Users/mstefanutti/.dotfiles"
+export DOTFILES_PATH="$HOME/.dotfiles"
 export DOTLY_PATH="$DOTFILES_PATH/modules/dotly"
 export DOTLY_THEME="codely"
 
@@ -15,7 +15,7 @@ themes_paths=(
   "$DOTLY_PATH/shell/bash/themes"
 )
 
-for THEME_PATH in ${themes_paths[@]}; do
+for THEME_PATH in "${themes_paths[@]}"; do
   THEME_PATH="${THEME_PATH}/$DOTLY_THEME.sh"
   [ -f "$THEME_PATH" ] && source "$THEME_PATH" && THEME_COMMAND="${PROMPT_COMMAND:-}" && break
 done
@@ -48,7 +48,3 @@ if [ -n "$(ls -A "$DOTFILES_PATH/shell/bash/completions/")" ]; then
     source "$bash_file"
   done
 fi
-
-
-# Added by Antigravity CLI installer
-export PATH="/Users/mstefanutti/.local/bin:$PATH"
