@@ -5,28 +5,17 @@ export CODELY_THEME_MINIMAL=false
 export CODELY_THEME_MODE="dark"
 export CODELY_THEME_PROMPT_IN_NEW_LINE=false
 export CODELY_THEME_PWD_MODE="short" # full, short, home_relative
+export CODELY_THEME_STATUS_ICON_OK=">"
+export CODELY_THEME_STATUS_ICON_KO="x"
 
 # ------------------------------------------------------------------------------
-# Languages
+# Languages & Runtimes
 # ------------------------------------------------------------------------------
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/amazon-corretto-15.jdk/Contents/Home'
 export GEM_HOME="$HOME/.gem"
-# export GOPATH="$HOME/.go"
-
-# ---------------------------------------------
-# 🎯 START OF GOENV CONFIGURATION
-#
+export GOPATH="$HOME/.go"
 export GOENV_ROOT="$HOME/.goenv"
-export PATH="$GOENV_ROOT/bin:$PATH"
-# Lazy load goenv
-function go gofmt goenv {
-	unset -f go gofmt goenv
-	eval "$(goenv init -)"
-	"$0" "$@"
-}
-#
-# 🎯 END OF GOENV CONFIGURATION
-# -----------------------------------------------------
+export NVM_DIR="$HOME/.nvm"
 
 # ------------------------------------------------------------------------------
 # Apps
@@ -44,6 +33,8 @@ export FZF_DEFAULT_OPTS="--color=$fzf_colors --reverse"
 # ------------------------------------------------------------------------------
 path=(
 	"$HOME/bin"
+	"$HOME/.local/bin"
+	"$HOME/.antigravity-ide/antigravity-ide/bin"
 	"$DOTLY_PATH/bin"
 	"$DOTFILES_PATH/bin"
 	"$GOENV_ROOT/bin"
@@ -52,6 +43,7 @@ path=(
 	"$GEM_HOME/bin"
 	"$GOPATH/bin"
 	"$HOME/.cargo/bin"
+	"/opt/homebrew/opt/libpq/bin"
 	"/usr/local/opt/ruby/bin"
 	"/usr/local/opt/python/libexec/bin"
 	"/opt/homebrew/bin"
